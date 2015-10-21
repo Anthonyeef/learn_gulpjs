@@ -4,7 +4,9 @@
   "description": "The build process of my website with Gulp.js",
   "private": true,
   "devDependencies": {
+    "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.4"
   }
 }
