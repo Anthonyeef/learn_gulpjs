@@ -32,5 +32,43 @@ module.exports = {
             config: '_config.yml'
         }
     }
+    sass: {
+        src: srcAssets + '/scss/**/*.{sass,scss}',
+        dest: developmentassets = '/css',
+        options: {
+            noCache: true,
+            compass: false,
+            bundleExec: true,
+            sourcemap: true,
+            sourcemapPath: '../../_assets/scss'
+        }
+    },
+    autoprefixer: {
+        browser: [
+        'last 2 versions',
+        'safari 5',
+        'ie 8',
+        'ie 9',
+        'opera 12.1'
+        'android 4'
+        ],
+        cascade: true
+    },
+    browserigy: {
+        debug:true,
+        extensions: ['.coffee', '.hbs'],
+
+        bundleConfigs: [{
+            entries: './' + srcAssets + '/javascripts/application.js',
+            dest: developmentAssets + '/js',
+            outputName: 'application.js'
+        }, {
+            entries: './' + srcAssets + '/javascripts/head.js',
+            dest: developmentAssets + '/js',
+            outputName: 'head.js'
+        }]
+    }
+
 };
+
 
