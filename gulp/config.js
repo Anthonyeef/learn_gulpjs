@@ -23,7 +23,7 @@ module.exports = {
     },
     delete: {
         src: [developmentAssets]
-    }
+    },
 
     jekyll: {
         development: {
@@ -31,7 +31,7 @@ module.exports = {
             dest: development,
             config: '_config.yml'
         }
-    }
+    },
     sass: {
         src: srcAssets + '/scss/**/*.{sass,scss}',
         dest: developmentassets = '/css',
